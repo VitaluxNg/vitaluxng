@@ -5,40 +5,320 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vitalux Nigeria Enterprises</title>
   <meta name="description" content="Official website for Vitalux Nigeria Enterprises" />
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#1d4ed8;
+      --accent-soft:#eff6ff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .container{
+      max-width:980px;
+      margin:0 auto;
+      padding:20px 16px 56px;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      font-size:1.05rem;
+    }
+    .logo{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      background:linear-gradient(135deg, #1d4ed8, #60a5fa);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.1rem;
+      font-weight:700;
+      box-shadow:0 8px 20px rgba(29,78,216,.22);
+    }
+    .nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .nav a{
+      text-decoration:none;
+      color:var(--accent);
+      font-weight:600;
+      font-size:.95rem;
+    }
+    .nav a:hover{text-decoration:underline}
+    .hero{
+      background:linear-gradient(180deg, #ffffff, #f8fbff);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:36px 28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+    }
+    .badge{
+      display:inline-block;
+      background:var(--accent-soft);
+      color:var(--accent);
+      border:1px solid #bfdbfe;
+      border-radius:999px;
+      padding:6px 12px;
+      font-size:.85rem;
+      font-weight:700;
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:2.3rem;
+      line-height:1.15;
+    }
+    .subtitle{
+      max-width:720px;
+      color:var(--muted);
+      font-size:1.05rem;
+      margin-bottom:18px;
+    }
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      border-radius:12px;
+      padding:11px 16px;
+      font-weight:700;
+      border:1px solid var(--line);
+    }
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
+      border-color:var(--accent);
+    }
+    .btn-secondary{
+      background:#fff;
+      color:var(--text);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:18px;
+      margin-top:22px;
+    }
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+      margin-top:18px;
+    }
+    h2{
+      margin-top:0;
+      margin-bottom:12px;
+      font-size:1.35rem;
+    }
+    p{margin:0 0 12px}
+    ul{
+      margin:0;
+      padding-left:20px;
+    }
+    li{margin-bottom:8px}
+    .service-list{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:12px;
+      list-style:none;
+      padding:0;
+    }
+    .service-list li{
+      background:#f9fafb;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+      margin:0;
+      font-weight:600;
+    }
+    .contact-box{
+      background:#f9fafb;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+    }
+    .muted{color:var(--muted)}
+    .footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem;
+      margin-top:24px;
+      padding-top:8px;
+    }
+    code{
+      background:#eef2ff;
+      color:#1e3a8a;
+      padding:2px 6px;
+      border-radius:6px;
+      word-break:break-word;
+    }
+    @media (max-width:760px){
+      h1{font-size:1.85rem}
+      .grid,
+      .service-list{
+        grid-template-columns:1fr;
+      }
+      .hero{padding:28px 20px}
+    }
+  </style>
 </head>
-<body style="font-family: Arial; background:#f5f5f5; margin:0; padding:20px;">
+<body>
+  <div class="container">
 
-<div style="max-width:800px;margin:auto;background:#fff;padding:20px;border-radius:10px;">
-<h1>Vitalux Nigeria Enterprises</h1>
-<p>Official Business Website</p>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">VN</div>
+        <div>Vitalux Nigeria Enterprises</div>
+      </div>
 
-<h2>About Us</h2>
-<p>Vitalux Nigeria Enterprises provides digital solutions and services designed to help individuals and businesses operate more efficiently using automation and modern tools.</p>
+      <div class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#deletion">Data Deletion</a>
+        <a href="#terms">Terms</a>
+      </div>
+    </div>
 
-<h2>Services</h2>
-<ul>
-<li>AI automation setup</li>
-<li>Business process automation</li>
-<li>Customer communication solutions</li>
-<li>Digital support services</li>
-</ul>
+    <section class="hero">
+      <div class="badge">Official Business Website</div>
+      <h1>Smart digital solutions for modern business operations.</h1>
+      <p class="subtitle">
+        Vitalux Nigeria Enterprises helps individuals and businesses improve efficiency
+        through practical digital support, communication solutions, and automation-focused services.
+      </p>
 
-<h2>Contact</h2>
-<p>Email: litecash20@gmail.com</p>
-<p>Phone: 09013869365</p>
-<p>Location: Lagos, Nigeria</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Contact Us</a>
+        <a class="btn btn-secondary" href="#privacy">View Privacy Policy</a>
+      </div>
+    </section>
 
-<h2>Privacy Policy</h2>
-<p>We collect basic information such as name, email, and phone number to provide our services. We do not sell your data.</p>
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <p>
+        Vitalux Nigeria Enterprises is focused on helping businesses simplify operations
+        through smart technology, better communication, and modern digital tools.
+        Our goal is to provide practical and affordable support that improves productivity,
+        service delivery, and day-to-day efficiency.
+      </p>
+    </section>
 
-<h2>Data Deletion</h2>
-<p>To delete your data, email litecash20@gmail.com with subject "Data Deletion Request".</p>
+    <section id="services" class="section">
+      <h2>Our Services</h2>
+      <ul class="service-list">
+        <li>AI automation setup</li>
+        <li>Business process automation</li>
+        <li>Customer communication solutions</li>
+        <li>Digital support services</li>
+      </ul>
+    </section>
 
-<h2>Terms of Service</h2>
-<p>Use our services lawfully. We are not liable for misuse.</p>
+    <div class="grid">
+      <section id="contact" class="section">
+        <h2>Contact Information</h2>
+        <div class="contact-box">
+          <p><strong>Business Name:</strong> Vitalux Nigeria Enterprises</p>
+          <p><strong>Email:</strong> <a href="mailto:litecash20@gmail.com">litecash20@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:09013869365">09013869365</a></p>
+          <p><strong>Location:</strong> Lagos, Nigeria</p>
+        </div>
+      </section>
 
-<p style="margin-top:30px;">© 2026 Vitalux Nigeria Enterprises</p>
-</div>
+      <section class="section">
+        <h2>Business Commitment</h2>
+        <p class="muted">
+          We are committed to delivering reliable, responsible, and professional digital services
+          tailored to client needs while respecting privacy and maintaining clear communication.
+        </p>
+      </section>
+    </div>
 
+    <section id="privacy" class="section">
+      <h2>Privacy Policy</h2>
+      <p>
+        At Vitalux Nigeria Enterprises, we value your privacy and are committed to protecting
+        your personal information.
+      </p>
+      <p><strong>Information We Collect:</strong> We may collect personal information such as your name,
+        email address, phone number, and any other information you provide when contacting us or using our services.
+      </p>
+      <p><strong>How We Use Information:</strong></p>
+      <ul>
+        <li>To provide and improve our services</li>
+        <li>To communicate with you</li>
+        <li>To respond to inquiries and support requests</li>
+      </ul>
+      <p><strong>Data Protection:</strong> We take reasonable measures to protect your data against
+        unauthorized access, alteration, or disclosure.</p>
+      <p><strong>Third-Party Sharing:</strong> We do not sell your personal information to third parties,
+        except where required by law or where necessary to deliver our services.</p>
+      <p><strong>Contact:</strong> For privacy questions, contact us at
+        <code>litecash20@gmail.com</code>.
+      </p>
+    </section>
+
+    <section id="deletion" class="section">
+      <h2>Data Deletion Instructions</h2>
+      <p>
+        If you wish to request the deletion of your personal data, please contact us directly.
+      </p>
+      <p>Email: <code>litecash20@gmail.com</code></p>
+      <p>Use the subject line: <code>Data Deletion Request</code></p>
+      <p>
+        In your request, please provide enough information to help us identify your record.
+        We will review and process your request within 48 hours and confirm once the action has been completed.
+      </p>
+    </section>
+
+    <section id="terms" class="section">
+      <h2>Terms of Service</h2>
+      <p>By using our services, you agree to the following terms:</p>
+      <ul>
+        <li>You will use our services for lawful purposes only.</li>
+        <li>We are not responsible for any misuse of our services.</li>
+        <li>We may update or modify our services at any time when necessary.</li>
+      </ul>
+      <p><strong>Limitation of Liability:</strong> Vitalux Nigeria Enterprises will not be liable for indirect
+        or consequential damages arising from the use of our services.</p>
+      <p><strong>Contact:</strong> For questions, please email <code>litecash20@gmail.com</code>.</p>
+    </section>
+
+    <div class="footer">
+      © 2026 Vitalux Nigeria Enterprises. All rights reserved.
+    </div>
+
+  </div>
 </body>
 </html>
